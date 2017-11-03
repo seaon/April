@@ -1,19 +1,31 @@
 #include <stdio.h>
 #include "list.h"
-// #include <stdlib.h>
+#include <stdlib.h>
 
 int main(int argc, char const *argv[])
 {
-    Node node;
-    node.value = 1;
+    PtrToNode p;
+    p = (PtrToNode)malloc(sizeof(struct Node));
 
-    printf("%d\n", node.value);
+    p->Element = 1;
+    p->Next = NULL;
+
+    printf("%p\n", p);
+    printf("%d\n", p->Element);
     return 0;
 }
 
-int len(Node node)
-{
-    int length = 0;
+// List MakeEmpty(List L)
+// {
+//     L = NULL;
+// }
 
-    return length;
-}
+// int IsEmpty(List L)
+// {
+//     return L->Next == NULL;
+// }
+
+// int IsLast(Position P, List L)
+// {
+//     return P->Next == NULL;
+// }
